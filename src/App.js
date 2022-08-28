@@ -5,6 +5,8 @@ import {
   Text,
   Link,
   VStack,
+  Input,
+  Button,
   Code,
   Grid,
   theme,
@@ -16,23 +18,15 @@ function App() {
   return (
     <ChakraProvider theme={theme}>
       <Box textAlign="center" fontSize="xl">
-        <Grid minH="100vh" p={3}>
+        <Grid minH="100vh" >
           <ColorModeSwitcher justifySelf="flex-end" />
-          <VStack spacing={8}>
-            <Logo h="40vmin" pointerEvents="none" />
-            <Text>
-              Edit <Code fontSize="xl">src/App.js</Code> and save to reload.
-            </Text>
-            <Link
-              color="teal.500"
-              href="https://chakra-ui.com"
-              fontSize="2xl"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Learn Chakra
-            </Link>
+          <div className="login-container">
+          <VStack spacing={8} textAlign="center">
+          <Input placeholder='User Name'/>
+          <Input placeholder='Password' />
+          <Button colorScheme='blue'>SignIn</Button>
           </VStack>
+          </div>
         </Grid>
       </Box>
     </ChakraProvider>
