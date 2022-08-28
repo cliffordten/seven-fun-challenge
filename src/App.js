@@ -5,6 +5,9 @@ import {
   Text,
   Link,
   VStack,
+  Input,
+  Select,
+  Button,
   Code,
   Grid,
   theme,
@@ -18,20 +21,18 @@ function App() {
       <Box textAlign="center" fontSize="xl">
         <Grid minH="100vh" p={3}>
           <ColorModeSwitcher justifySelf="flex-end" />
-          <VStack spacing={8}>
-            <Logo h="40vmin" pointerEvents="none" />
-            <Text>
-              Edit <Code fontSize="xl">src/App.js</Code> and save to reload.
-            </Text>
-            <Link
-              color="teal.500"
-              href="https://chakra-ui.com"
-              fontSize="2xl"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Learn Chakra
-            </Link>
+          <VStack spacing={8} width="500px" margin="auto">
+          <Input placeholder='Enter your user name' />
+          <Input
+     placeholder="Select The Year"
+     size="md"
+     type="number" MaxLength= "4"
+    />
+          <Select placeholder='Select Semester'>
+  <option value='Semester1'>Semester1</option>
+  <option value='Semester2'>Semester2</option>
+</Select>
+          <Button colorScheme='blue'>Search</Button>
           </VStack>
         </Grid>
       </Box>
