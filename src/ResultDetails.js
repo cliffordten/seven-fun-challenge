@@ -10,6 +10,7 @@ import {
   Td,
   Heading,
   Text,
+  Button,
 } from '@chakra-ui/react';
 import { ColorModeSwitcher } from './ColorModeSwitcher';
 import { useNavigate, useParams } from 'react-router-dom';
@@ -125,6 +126,14 @@ const ResultDetails = () => {
                 ) : null}
               </Tbody>
             </Table>
+            <Button
+              width={'100%'}
+              marginTop="10"
+              colorScheme="blue"
+              onClick={() => window.print()}
+            >
+              Download Result
+            </Button>
           </TableContainer>
         </VStack>
       </Grid>

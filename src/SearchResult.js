@@ -98,7 +98,6 @@ const SearchResult = () => {
             placeholder="Select The Year"
             size="md"
             type="date"
-            value={studentInfo.date}
             onChange={e =>
               setStudentInfo(prev => ({
                 ...prev,

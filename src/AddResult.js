@@ -126,7 +126,6 @@ const AddResult = () => {
                       placeholder="Select Date and Time"
                       size="md"
                       type="date"
-                      value={studentInfo.date}
                       onChange={e =>
                         setStudentInfo(prev => ({
                           ...prev,
