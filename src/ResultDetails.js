@@ -11,6 +11,8 @@ import {
   Heading,
   Text,
   Button,
+  Alert,
+  AlertIcon,
 } from '@chakra-ui/react';
 import { ColorModeSwitcher } from './ColorModeSwitcher';
 import { useNavigate, useParams } from 'react-router-dom';
@@ -42,6 +44,17 @@ const ResultDetails = () => {
 
     return () => {};
   }, [index]);
+
+  if (!user) {
+    return (
+      <Box width={'40%'} margin="auto" mt={'20'}>
+        <Alert status="error">
+          <AlertIcon />
+          {'No results found'}
+        </Alert>
+      </Box>
+    );
+  }
 
   return (
     <Box textAlign="center" fontSize="xl">
